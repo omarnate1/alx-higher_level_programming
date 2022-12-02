@@ -8,7 +8,7 @@ argumentStr = "{:d} argument"
 argc = len(sys.argv) - 1
 if argc == 0:
     argumentStr += 's.'
-elif argc ==1:
+elif argc == 1:
     argumentStr += ':'
 else:
     argumentStr += 's:'
