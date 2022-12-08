@@ -1,11 +1,7 @@
 #!/usr/bin/python3
 
 def weight_average(my_list=[]):
-    if my_list and len(my_list):
-        nume = 0
-        denom = 0
-        for tup in my_list:
-            num += (tup[0] * tup[1])
-            denom += (tup[1])
-        return (num/denom)
-    return 0
+    if len(my_list) == 0:
+        return 0
+    scores = [score*weight for (score, weight) in my_list]
+    return sum(scores) / sum([weight for (score, weight) in my_list])
