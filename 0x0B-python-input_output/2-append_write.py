@@ -6,16 +6,14 @@ Created on Tru Jun 3 15:13:37 2020
 """
 
 
-def read_lines(filename="", nb_lines=0):
+def append_write(filename="", text=""):
     """
-    Reads n lines from file and prints to stdout
+    Appends inputed text into a utf-8 encoded text file
     Arguments:
         filename (str): The name of the file to open
-        nb_lines (int): The number of lines to print
+        text (str): The text to append
+    Return:
+        A file with appened text
     """
-    with open(filename, encoding='utf-8') as file:
-        lines = file.readlines()
-    if nb_lines >= len(lines) or nb_lines <= 0:
-        nb_lines = len(lines)
-    for i in range(nb_lines):
-        print(lines[i], end='')
+    with open(filename, 'a', encoding='utf-8') as file:
+        return file.write(text)
