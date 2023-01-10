@@ -1,11 +1,16 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
+"""Module 2-is_same_class
+"""
 
 
 def is_same_class(obj, a_class):
+    """Checks if an object is an instance of a class
+    Args:
+        obj (_object): _description_
+        a_class (class): _description_
+    Returns:
+        True: if object is an instance of class
+        False: if it is not
     """
-    Checks if two objects are the same class
-    """
-    if not isinstance(a_class, type):
-        raise TypeError("a_class must be a type")
-    return (type(obj) is a_class)
+
+    return True if type(obj) is a_class else False

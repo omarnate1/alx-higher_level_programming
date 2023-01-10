@@ -1,33 +1,35 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
+"""Module 11-square.
+Creates a Square class.
+"""
 
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Rectangle = __import__('9-rectangle').Rectangle
 
 
-class Square(BaseGeometry):
+class Square(Rectangle):
+    """Represents a square.
+    Private instance attribute size.
+    Public method area().
+    Inherits from Rectangle.
     """
-    A Square class shape, inheirts from BaseGeometry
-    """
+
     def __init__(self, size):
-        """"
-        Init function for Square
-        Attributes:
-            size (int): The size of the square
+        """Initializes a Square.
+        Args:
+            - size: size of the square
         """
+
         self.integer_validator("size", size)
         self.__size = size
 
     def __str__(self):
-        """
-        str funtion to print with/height
-        Returns:
-            Return width/height
-        """
-        return '[Square] ' + str(self.__size) + '/' + str(self.__size)
+        return str("[Square] {}/{}".format(self.__size, self.__size))
 
     def area(self):
+        """Computes the area of a Square instance.
+        Overwrites the area() method from Rectangle.
         """
-        A function that calculates the area of the Square
-        """
+
         return self.__size ** 2
